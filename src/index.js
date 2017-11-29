@@ -1,8 +1,17 @@
-import './index.css'
+import React from "react";
+import { render } from "react-dom";
+import { Provider } from "react-redux";
 
-import React from 'react'
-import {render} from 'react-dom'
+import { getStore } from "./store";
 
-import App from './App'
+import "./index.css";
+import Editor from './Editor';
 
-render(<App/>, document.querySelector('#app'))
+const store = getStore();
+
+render(
+  <Provider store={store}>
+    <Editor />
+  </Provider>,
+  document.querySelector("#app")
+);

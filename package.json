@@ -12,8 +12,17 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
+    "elasticsearch": "^14.0.0",
     "react": "^16.1.1",
-    "react-dom": "^16.1.1"
+    "react-ace": "^5.7.0",
+    "react-dom": "^16.1.1",
+    "react-redux": "^5.0.6",
+    "react-highlight": "briancappello/react-highlight#react-v16-compiled",
+    "redux": "^3.7.2",
+    "redux-devtools": "^3.4.1",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-immutable-state-invariant": "^2.1.0",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "nwb": "0.20.x"
