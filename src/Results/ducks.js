@@ -31,7 +31,7 @@ const queryES = (dispatch, getState) => {
       .then(result => dispatch(gotResults(result)), e => dispatch(gotError(e)))
       .catch(e => dispatch(gotError(e)));
   } catch (e) {
-    dispatch(gotError);
+    dispatch(gotError(e));
   }
 };
 
@@ -40,7 +40,7 @@ const initialState = {
   loading: false,
   error: false,
   errorMessage: "",
-  config: "http://admin:changeme@localhost:9200/es"
+  config: "http://admin:changeme@localhost:9200/"
 };
 
 const loading = (state = initialState.loading, action) => {
@@ -100,7 +100,7 @@ const config = (state = initialState.config, action) => {
   }
 };
 
-const setUrl = url => ({type: SET_URL, url});
+const setUrl = url => ({ type: SET_URL, url });
 
 export { queryES, gotResults, setUrl };
 

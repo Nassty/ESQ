@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { getStore } from "./store";
 
 import "./index.css";
-import Editor from './Editor';
+import Editor from "./Editor";
 
 const store = getStore();
 

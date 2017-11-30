@@ -66,7 +66,10 @@ export default connect(
     code: state.editor.code,
     results: JSON.stringify(state.results.results, null, 2),
     configString: state.results.config,
-    errorMessage: Boolean(state.results.errorMessage) && JSON.stringify(state.results.errorMessage, null, 2) || ""
+    errorMessage:
+      (Boolean(state.results.errorMessage) &&
+        JSON.stringify(state.results.errorMessage, null, 2)) ||
+      ""
   }),
   dispatch => ({
     onChange: code => dispatch(addCode(code[0])),
